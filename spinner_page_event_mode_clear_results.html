@@ -1,29 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Spinner Page</title>
-    <script>
-        // Other script content
-
-        // Removed clearBtn event listener
-
-        // Removed:
-        // clearBtn.addEventListener('click', function() {
-        //    // Clear results logic
-        // });
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warrior Golf Prize Spinner</title>
 </head>
 <body>
-    <h1>Welcome to Hole Advantage Spinner</h1>
+    <h1>Warrior Golf Prize Spinner</h1>
+    <div id="spinner"></div>
+    <script>
+        const spinnerElement = document.getElementById('spinner');
+        const prizes = ['$100 Gift Card', 'Free Round of Golf', 'Golf Balls', 'Golf Club', 'T-Shirt'];
 
-    <div id="spinner-area">
-        <div id="results">
-            <!-- Results will be shown here -->
-        </div>
+        function spin() {
+            const randomIndex = Math.floor(Math.random() * prizes.length);
+            const prize = prizes[randomIndex];
+            alert(`Congratulations! You won: ${prize}`);
+        }
 
-        <!-- Removed Clear Results button -->
-        <!-- <button id="clearBtn">Clear Results</button> -->
-    </div>
-
+        spinnerElement.addEventListener('click', spin);
+    </script>
 </body>
 </html>
